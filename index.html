@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./libs/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="./libs/css/style.css" >
+
+    </head>
+
+
+
+    <body>
+        <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">SQL Code</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img id="sql_code"/>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q3 Which provider generates the most income? 
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each provider</li>
+                        <li>Order by the summed values high to low</li>
+                        <li>Show the first result of the query</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold" >Provider</td>
+                            <td class="fw-bold">Income</td>
+                        </tr>
+                        <tr>
+                            <td id="q3_provider"></td>
+                            <td id="q3_sum"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q3">
+                    SQL
+                  </button>
+            </div>
+        </div>
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q4 Which client generates the most income? 
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each client</li>
+                        <li>Order by the summed values high to low</li>
+                        <li>Show the first result of the query</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold">Client</td>
+                            <td class="fw-bold">Income</td>
+                        </tr>
+                        <tr>
+                            <td id="q4_client"></td>
+                            <td id="q4_sum"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q4">
+                    SQL
+                  </button>
+            </div>
+
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q5 If a household is defined as a single generation family what is the total value of largest household?
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each client</li>
+                        <li>Determine which generation each client belongs to</li>
+                        <li>Sum the values grouped by the family name and generation to get each household's value</li>
+                        <li>Count the members of each household</li>
+                        <li>List the results that have the most members</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table id="q5_table" class="table table-bordered">
+                        
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q6 What income would you expect Caroline Walker to receive in July?
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Find the reference number of Caroline Walker</li>
+                        <li>Sum the values for each month where the reference number matches with the found reference</li>
+                        <li>Find and display the median of the values</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td id="q6"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q6">
+                    SQL
+                  </button>
+            </div>
+
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q7 How much income was received in March from clients currently aged over 50?
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Calculate each clients age by deducting their date of birth from the current date</li>
+                        <li>Sum the values in March for each client </li>
+                        <li>Sum the values of clients who are over 50 years old</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td id="q7"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q7">
+                    SQL
+                  </button>
+            </div>
+
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q8 Which month was the highest total income received? 
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each month</li>
+                        <li>Order by the summed values high to low</li>
+                        <li>Show the first result of the query</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold">Month</td>
+                            <td class="fw-bold">Value</td>
+                        </tr>
+                        <tr>
+                            <td id="q8_month"></td>
+                            <td id="q8_sum"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q8">
+                    SQL
+                  </button>
+            </div>
+
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q9 Which month was the lowest total income received? 
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each month</li>
+                        <li>Order by the summed values low to high</li>
+                        <li>Show the first result of the query</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold">Month</td>
+                            <td class="fw-bold">Value</td>
+                        </tr>
+                        <tr>
+                            <td id="q9_month"></td>
+                            <td id="q9_sum"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q9">
+                    SQL
+                  </button>
+            </div>
+
+        </div>
+
+        <div class="border py-2">
+            <div class="text-center pb-3 fw-bold">
+                Q10 Which client's income had the largest relative increase between January and June?
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mx-3">
+                    <div class="text-center">Methodology</div>
+                    <ol>
+                        <li>Sum the values for each client in January</li>
+                        <li>Sum the values for each client in June</li>
+                        <li>Divide the values in June by January, multiply it by 100 and deduct 100 to get the relative increase</li>
+                        <li>June/January*100-100</li>
+                        <li>Order it by the relative increase heigh to low</li>
+                        <li>Display the first result</li>
+                    </ol>
+                </div>
+                <div class="mx-3">
+                    <div class="text-center">Answer</div>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td class="fw-bold">Client</td>
+                            <td class="fw-bold">Increase (%)</td>
+                        </tr>
+                        <tr>
+                            <td id="q10_reference"></td>
+                            <td id="q10_increase"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button  type="button" class="btn btn-primary sql_btn"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="Q10">
+                    SQL
+                  </button>
+            </div>
+        </div>
+        <script src="./libs/js/app.js"></script>
+        <script src="./libs/js/bootstrap.min.js" ></script>
+    </body>
+
+</html>
